@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Video Downloader</title>
+</head>
+<body>
+    <h1>🔻 YouTube Video Downloader 🔻</h1>
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    <form method="POST">
+        <label>URL de la vidéo YouTube :</label>
+        <input type="text" name="url" required>
+        <br><br>
+        
+        <input type="checkbox" name="remove_copyright">
+        <label>Supprimer les métadonnées de copyright</label>
+        <br>
+        
+        <input type="checkbox" name="audio_only">
+        <label>Télécharger uniquement l'audio</label>
+        <br><br>
+        
+        <button type="submit">Télécharger</button>
+    </form>
+</body>
+</html>
